@@ -7,3 +7,9 @@
     <title>CRUD PHP</title>
 </head>
 <body>
+    
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/CRUD_PHP_Mysqli/index.php">
+    Tasks
+  </a>
+</nav>

@@ -16,7 +16,7 @@ include('layout/header.php');
         } ?>
         <a href="#" class="btn btn-success" data-toggle="modal" data-target="#taskModal">New Task</a>
     </div>
-    <table class="table table-bordered mt-4">
+    <table class="table table-hover mt-4">
         <tr>
             <td>ID</td>
             <td>Responsable</td>
@@ -24,7 +24,7 @@ include('layout/header.php');
             <td>Actions</td>
         </tr>
         <?php
-        $query = "SELECT * FROM tasks;";
+        $query = "SELECT * FROM $table;";
         $res = mysqli_query($conection, $query);
         while ($row = mysqli_fetch_array($res)) {
         ?>
@@ -34,7 +34,7 @@ include('layout/header.php');
                 <td><?php echo $row['description']; ?></td>
                 <td>
                     <div class="mb-2">
-                        <form action="services/management.php?id=<?php echo $row['id']; ?>" method="post">
+                        <form action="services/updateTask.php?id=<?php echo $row['id']; ?>" method="post">
                             <button type="submit" name="getTask" class="form-control btn btn-block btn-warning">Edit Task</button>
                         </form>
                     </div>

@@ -7,6 +7,8 @@ $user = "root";
 $password = "";
 $nameBD = "tblTasks";
 
+$table = "tasks";
+
 $conection = mysqli_connect(
     "$localhost",
     "$user",
